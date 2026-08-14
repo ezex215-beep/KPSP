@@ -1,0 +1,6 @@
+{
+  "name": "บันทึกการเงิน",
+  "description": "แอปพลิเคชันบันทึกการเงิน วางแผนงบประมาณ และติดตามรายรับ-รายจ่ายสไตล์ Cyber-Luminous",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

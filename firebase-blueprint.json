@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CyberFinanceDataModel",
+  "description": "Firestore schema blueprint for Cyber-Luminous Finance App",
+  "entities": {
+    "UserProfile": {
+      "collection": "users",
+      "fields": {
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "tagline": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "Transaction": {
+      "collection": "users/{userId}/transactions",
+      "fields": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "amount": { "type": "number" },
+        "type": { "type": "string", "enum": ["income", "expense"] },
+        "categoryId": { "type": "string" },
+        "categoryName": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "CategoryBudget": {
+      "collection": "users/{userId}/categories",
+      "fields": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "icon": { "type": "string" },
+        "allocated": { "type": "number" },
+        "spent": { "type": "number" },
+        "color": { "type": "string" },
+        "type": { "type": "string", "enum": ["income", "expense"] }
+      }
+    }
+  }
+}
